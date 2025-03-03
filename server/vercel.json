@@ -2,40 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "./index.js",
-      "use": "@vercel/react"
-    },
-    {
-      "src": "backend/index.js",
+      "src": "server/index.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/frontend/$1"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/old-path",
-      "destination": "/new-path",
-      "permanent": true
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Custom-Header",
-          "value": "My custom value"
-        }
-      ]
+      "dest": "/"
     }
   ]
 }
