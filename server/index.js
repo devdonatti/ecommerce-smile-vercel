@@ -2,12 +2,14 @@ import express from "express";
 import cors from "cors";
 import { MercadoPagoConfig, Preference } from "mercadopago";
 
+// Configuración del cliente de MercadoPago
 const client = new MercadoPagoConfig({
   accessToken:
     "APP_USR-5002262327522339-110611-d2dfcbaa10598f2336e9c4b9ded29dd7-1338912701",
 });
 
 const app = express();
+// Configuración de CORS
 app.use(
   cors({
     origin: "http://localhost:5173", // Permitir solo el frontend que corre en este puerto
@@ -22,8 +24,9 @@ app.get("/", (req, res) => {
   res.send("Soy el server :)");
 });
 
+// Endpoint para crear una preferencia desde el detalle del producto
 app.post("/create_preference", async (req, res) => {
-  console.log("Datos recibidos en /create_preference:", req.body);
+  console.log("Datos recibidos en /create_preference:", req.body); // Agregar log para verificar los datos que recibes
   try {
     const body = {
       items: [
@@ -47,10 +50,14 @@ app.post("/create_preference", async (req, res) => {
     const preference = new Preference(client);
     const result = await preference.create({ body });
 
+    // Imprimir la respuesta completa para verificar la estructura
+    console.log("Resultado completo de MercadoPago:", result);
+
+    // Verificar si la respuesta contiene los campos necesarios
     if (result && result.id && result.init_point) {
       return res.json({
-        id: result.id,
-        init_point: result.init_point,
+        id: result.id, // id directamente en el objeto
+        init_point: result.init_point, // URL para redirigir
       });
     } else {
       console.error("Respuesta inesperada de MercadoPago:", result);
@@ -66,8 +73,9 @@ app.post("/create_preference", async (req, res) => {
   }
 });
 
+// Endpoint para crear una preferencia desde el carrito de compras
 app.post("/create_preference_cart", async (req, res) => {
-  console.log("Datos recibidos en /create_preference_cart:", req.body);
+  console.log("Datos recibidos en /create_preference_cart:", req.body); // Agregar log para verificar los datos que recibes
   try {
     const cartItems = req.body.cartItems;
 
@@ -107,10 +115,14 @@ app.post("/create_preference_cart", async (req, res) => {
     const preference = new Preference(client);
     const result = await preference.create({ body });
 
+    // Imprimir la respuesta completa para verificar la estructura
+    console.log("Resultado completo de MercadoPago:", result);
+
+    // Verificar si la respuesta contiene los campos necesarios
     if (result && result.id && result.init_point) {
       return res.json({
-        id: result.id,
-        init_point: result.init_point,
+        id: result.id, // id directamente en el objeto
+        init_point: result.init_point, // URL para redirigir
       });
     } else {
       console.error("Respuesta inesperada de MercadoPago:", result);
@@ -126,7 +138,13 @@ app.post("/create_preference_cart", async (req, res) => {
   }
 });
 
-// Exportar la función para que Vercel la ejecute como una función serverless
+// Exportar la función serverless para Vercel
+if (process.env.NODE_ENV !== "production") {
+  app.listen(3000, () => {
+    console.log("Servidor local en el puerto 3000");
+  });
+}
+
 export default (req, res) => {
-  app(req, res);
+  app(req, res); // Llamar a la aplicación express para manejar las solicitudes
 };

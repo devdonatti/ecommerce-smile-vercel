@@ -14,10 +14,6 @@
     {
       "src": "/api/(.*)",
       "dest": "/server/index.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/vite-project/$1"
     }
   ]
 }
