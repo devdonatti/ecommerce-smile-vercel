@@ -1,23 +1,14 @@
 {
-  "version": 2,
   "builds": [
     {
-      "src": "vite-project/package.json",
-      "use": "@vercel/react"
-    },
-    {
-      "src": "server/index.js",
+      "src": "./index.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/server/index.js"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/vite-project/$1"
+      "dest": "/"
     }
   ]
 }
