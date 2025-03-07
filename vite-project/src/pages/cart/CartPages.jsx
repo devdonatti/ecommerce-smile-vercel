@@ -272,7 +272,7 @@ const CartPage = () => {
       });
 
       const response = await axios.post(
-        "http://localhost:3000/create_preference_cart",
+        "https://ecommerce-smile-vercel-git-main-devdonattis-projects.vercel.app/api/create_preference_cart.",
         { cartItems: items }
       );
 
@@ -294,7 +294,7 @@ const CartPage = () => {
   const handleBuyNow = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/create_preference_cart",
+        "https://ecommerce-smile-vercel-git-main-devdonattis-projects.vercel.app/api/create_preference_cart.",
         { cartItems }
       );
       const preferenceIdcart = response.data.id;
