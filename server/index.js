@@ -13,7 +13,7 @@ const app = express();
 // Configuración de CORS
 app.use(
   cors({
-    origin: "http://localhost:5173", // Permitir solo el frontend que corre en este puerto
+    origin: "https://ecommerce-smile-vercel-mw1z-front.vercel.app", // Permitir solo el frontend que corre en este puerto
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   })
