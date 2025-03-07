@@ -13,7 +13,7 @@ const app = express();
 // Configuración de CORS
 app.use(
   cors({
-    origin: "https://ecommerce-smile-vercel-mw1z-front.vercel.app", // Permitir solo el frontend que corre en este puerto
+    origin: "https://ecommerce-smile-vercel-mw1z-front-pijrnp30b.vercel.app/", // Permitir solo el frontend que corre en este puerto
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   })
@@ -73,7 +73,7 @@ app.post("/create_preference", async (req, res) => {
 });
 
 // Endpoint para crear una preferencia desde el carrito de compras
-app.post("/create_preference_cart", async (req, res) => {
+app.post("/api/create_preference_cart", async (req, res) => {
   console.log("Datos recibidos en /create_preference_cart:", req.body); // Agregar log para verificar los datos que recibes
   try {
     const cartItems = req.body.cartItems;
