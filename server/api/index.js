@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 });
 
 // Endpoint para crear una preferencia desde el detalle del producto
-app.post("/api/create_preference", async (req, res) => {
+app.post("/create_preference", async (req, res) => {
   console.log("Datos recibidos en /create_preference:", req.body); // Agregar log para verificar los datos que recibes
   try {
     const body = {
@@ -74,7 +74,7 @@ app.post("/api/create_preference", async (req, res) => {
 });
 
 // Endpoint para crear una preferencia desde el carrito de compras
-app.post("/api/create_preference_cart", async (req, res) => {
+app.post("/create_preference_cart", async (req, res) => {
   console.log("Datos recibidos en /create_preference_cart:", req.body); // Agregar log para verificar los datos que recibes
   try {
     const cartItems = req.body.cartItems;
