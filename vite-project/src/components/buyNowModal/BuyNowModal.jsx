@@ -34,7 +34,7 @@ const BuyNowModal = ({ addressInfo, setAddressInfo, buyNowFunction }) => {
 
       // Llamada al backend para crear la preferencia
       const response = await axios.post(
-        "https://ecommerce-smile-vercel.vercel.app/create_preference_cart",
+        "https://ecommerce-smile-vercel-mw1z-front.vercel.app/create_preference_cart",
         { cartItems: items }
       );
 
