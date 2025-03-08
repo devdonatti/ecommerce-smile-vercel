@@ -14,6 +14,7 @@ const app = express();
 app.use(
   cors({
     origin: [
+      "https://ecommerce-smile-vercel-mw1z-front-git-main-devdonattis-projects.vercel.app",
       "https://ecommerce-smile-vercel-mw1z-front-dd1wnhnyv.vercel.app",
       "https://ecommerce-smile-vercel-mw1z-front-ju3aczsdf.vercel.app",
     ], // Permitir ambos frontends
