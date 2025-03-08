@@ -20,11 +20,8 @@ const UserDashboard = () => {
           {/* main  */}
           <div className=" bg-gray-300 py-5 rounded-xl border border-gray-300">
             {/* image  */}
-            <div className="flex justify-center">
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/2202/2202112.png"
-                alt=""
-              />
+            <div className="flex justify-center ">
+              <img className="w-20 h-20" src="/logo.png" alt="" />
             </div>
             {/* text  */}
             <div className="">
