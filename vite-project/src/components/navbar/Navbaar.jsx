@@ -20,12 +20,7 @@ const Navbar = () => {
 
   // navList Data
   const navList = (
-    <ul className="flex space-x-3 text-white font-medium text-md px-5 ">
-      {/* Home */}
-      <li>
-        <Link to={"/"}>HOME</Link>
-      </li>
-
+    <ul className="flex space-x-3 text-white font-medium text-md px-5">
       {/* All Product */}
       <li>
         <Link to={"/allproduct"}>PRODUCTOS</Link>
@@ -65,7 +60,7 @@ const Navbar = () => {
 
       {/* logout */}
       {user && (
-        <li className=" cursor-pointer" onClick={logout}>
+        <li className="cursor-pointer" onClick={logout}>
           SALIR
         </li>
       )}
@@ -76,22 +71,27 @@ const Navbar = () => {
       </li>
     </ul>
   );
+
   return (
-    <nav className="bg-black sticky top-0">
+    <nav className="bg-black sticky top-0 z-20">
       {/* main  */}
-      <div className="lg:flex lg:justify-between items-center py-3 lg:px-3 ">
+      <div className="lg:flex lg:justify-between items-center py-2 lg:px-3">
         {/* left  */}
-        <div className="left py-3 lg:py-0">
+        <div className="flex justify-center lg:justify-start w-full">
           <Link to={"/"}>
-            <img className="h-16 w-16" src="/logo.png" alt="" />
+            <img className="h-16 w-16" src="/logo.png" alt="Logo" />
           </Link>
         </div>
 
-        {/* right  */}
-        <div className="right flex justify-center mb-4 lg:mb-0">{navList}</div>
+        {/* navList - centering the items in small screens, aligning to left on large screens */}
+        <div className="flex justify-center lg:justify-start lg:ml-0 w-full">
+          <div className="flex justify-center lg:ml-0">{navList}</div>
+        </div>
 
-        {/* Search Bar  */}
-        <SearchBar />
+        {/* Search Bar */}
+        <div className="flex justify-center lg:ml-auto">
+          <SearchBar />
+        </div>
       </div>
     </nav>
   );
