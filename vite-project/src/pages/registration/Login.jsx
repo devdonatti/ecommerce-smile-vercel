@@ -28,7 +28,7 @@ const Login = () => {
   const userLoginFunction = async () => {
     // validation
     if (userLogin.email === "" || userLogin.password === "") {
-      toast.error("All Fields are required");
+      toast.error("Todos los campos son requeridos");
     }
 
     setLoading(true);
@@ -53,7 +53,7 @@ const Login = () => {
             email: "",
             password: "",
           });
-          toast.success("Login Successfully");
+          toast.success("Bienvenido/a");
           setLoading(false);
           if (user.role === "user") {
             navigate("/user-dashboard");

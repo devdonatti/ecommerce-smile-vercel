@@ -330,7 +330,7 @@ const CartPage = () => {
 
   const deleteCart = (item) => {
     dispatch(deleteFromCart(item));
-    toast.success("Item removed from cart");
+    toast.success("Producto eliminado del carrito");
   };
 
   const handleIncrement = (id) => {
@@ -382,7 +382,7 @@ const CartPage = () => {
       addressInfo.pincode === "" ||
       addressInfo.mobileNumber === ""
     ) {
-      return toast.error("All fields are required");
+      return toast.error("Todos los campos son requeridos");
     }
 
     // Información de la orden
@@ -414,10 +414,10 @@ const CartPage = () => {
         mobileNumber: "",
         time: Timestamp.now().toMillis(), // Asegúrate de resetear el time
       });
-      toast.success("Order placed successfully");
+      toast.success("Orden creada exitosamente");
     } catch (error) {
       console.log(error);
-      toast.error("Error placing order");
+      toast.error("Error al crear la orden");
     }
   };
 

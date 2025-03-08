@@ -34,7 +34,7 @@ const Signup = () => {
       userSignup.email === "" ||
       userSignup.password === ""
     ) {
-      toast.error("All Fields are required");
+      toast.error("Todos los campos son requeridos");
     }
 
     setLoading(true);
@@ -71,7 +71,7 @@ const Signup = () => {
         password: "",
       });
 
-      toast.success("Signup Successfully");
+      toast.success("Registro exitoso");
 
       setLoading(false);
       navigate("/login");

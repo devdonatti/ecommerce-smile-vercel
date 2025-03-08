@@ -18,12 +18,12 @@ const AllProduct = () => {
   const addCart = (item) => {
     // console.log(item)
     dispatch(addToCart(item));
-    toast.success("Add to cart");
+    toast.success("Agregar al carrito");
   };
 
   const deleteCart = (item) => {
     dispatch(deleteFromCart(item));
-    toast.success("Delete cart");
+    toast.success("Borrar del carrito");
   };
 
   // console.log(cartItems)

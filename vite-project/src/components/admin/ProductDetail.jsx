@@ -19,7 +19,7 @@ const ProductDetail = () => {
     setLoading(true);
     try {
       await deleteDoc(doc(fireDB, "products", id));
-      toast.success("Product Deleted successfully");
+      toast.success("Producto borrado exitosamente");
       getAllProductFunction();
       setLoading(false);
     } catch (error) {
