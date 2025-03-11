@@ -4,8 +4,19 @@ import { useSelector } from "react-redux";
 
 const Navbar = () => {
   // get user from localStorage
-  const user = JSON.parse(localStorage.getItem("users"));
+  const storedUser = localStorage.getItem("users");
+  let user = null;
 
+  if (storedUser) {
+    try {
+      user = JSON.parse(storedUser);
+    } catch (error) {
+      console.error(
+        "Error al parsear los datos de usuario de localStorage:",
+        error
+      );
+    }
+  }
   // navigate
   const navigate = useNavigate();
 

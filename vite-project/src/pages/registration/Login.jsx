@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import myContext from "../../context/myContext";
@@ -72,11 +71,12 @@ const Login = () => {
       toast.error("Login Failed");
     }
   };
+
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center h-screen sm:m-4">
       {loading && <Loader />}
       {/* Login Form  */}
-      <div className="login_Form bg-gray-300 px-8 py-6 border border-gray-700 rounded-xl shadow-md">
+      <div className="login_Form bg-gray-300 px-8 py-6 border border-gray-700 rounded-xl shadow-md w-full sm:w-96 md:w-80 lg:w-1/3 xl:w-1/4">
         {/* Top Heading  */}
         <div className="mb-5">
           <h2 className="text-center text-2xl font-bold text-black ">Entrar</h2>
@@ -95,7 +95,7 @@ const Login = () => {
                 email: e.target.value,
               });
             }}
-            className="bg-gray-300 border border-gray-500 px-2 py-2 w-96 rounded-md outline-none placeholder-pink-200"
+            className="bg-gray-300 border border-gray-500 px-2 py-2 w-full rounded-md outline-none placeholder-pink-200"
           />
         </div>
 
@@ -111,7 +111,7 @@ const Login = () => {
                 password: e.target.value,
               });
             }}
-            className="bg-pink-50 border border-gray-500 px-2 py-2 w-96 rounded-md outline-none placeholder-pink-200"
+            className="bg-pink-50 border border-gray-500 px-2 py-2 w-full rounded-md outline-none placeholder-pink-200"
           />
         </div>
 
@@ -126,11 +126,11 @@ const Login = () => {
           </button>
         </div>
 
-        <div>
+        <div className="text-center">
           <h2 className="text-black">
-            ¿No tenes cuenta?{" "}
-            <Link className=" text-black font-bold" to={"/signup"}>
-              Registrame
+            ¿No tienes cuenta?{" "}
+            <Link className="text-black font-bold" to={"/signup"}>
+              Regístrate
             </Link>
           </h2>
         </div>
