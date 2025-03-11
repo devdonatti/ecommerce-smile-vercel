@@ -1,14 +1,7 @@
 import { Button, Dialog, DialogBody } from "@material-tailwind/react";
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  incrementQuantity,
-  decrementQuantity,
-  deleteFromCart,
-} from "../../redux/cartSlice";
-import toast from "react-hot-toast";
 import axios from "axios";
-import { initMercadoPago } from "@mercadopago/sdk-react";
+import toast from "react-hot-toast";
 
 // Inicialización de MercadoPago
 initMercadoPago("APP_USR-81e7d767-9d1d-4229-afb3-d82f1fd5ed86");
@@ -18,6 +11,13 @@ const BuyNowModal = ({ addressInfo, setAddressInfo, buyNowFunction }) => {
 
   // Función para abrir/cerrar el modal
   const handleOpen = () => setOpen(!open);
+
+  // Validación de los campos del formulario
+  const isFormValid =
+    addressInfo.name &&
+    addressInfo.address &&
+    addressInfo.pincode &&
+    addressInfo.mobileNumber;
 
   // Crear preferencia de MercadoPago para el carrito completo
   const createPreference = async (cartItems) => {
@@ -38,12 +38,10 @@ const BuyNowModal = ({ addressInfo, setAddressInfo, buyNowFunction }) => {
         { cartItems: items }
       );
 
-      // Verifica lo que devuelve la respuesta
       console.log("Respuesta del servidor:", response.data);
 
       const { id, init_point } = response.data;
 
-      // Verifica si el id fue recibido correctamente
       if (id) {
         console.log("Preference ID set:", id); // Verifica que se está guardando correctamente
         window.location.href = init_point; // Redirige al usuario a MercadoPago
@@ -132,7 +130,10 @@ const BuyNowModal = ({ addressInfo, setAddressInfo, buyNowFunction }) => {
               handleOpen(); // Cerrar el modal
               buyNowFunction(createPreference); // Llamar a la función buyNowFunction que pasará createPreference
             }}
-            className="w-full px-4 py-3 text-center text-gray-100 bg-black border border-transparent dark:border-gray-700 rounded-lg"
+            disabled={!isFormValid} // Deshabilitar el botón si el formulario no está completo
+            className={`w-full px-4 py-3 text-center text-gray-100 ${
+              !isFormValid ? "bg-gray-400 cursor-not-allowed" : "bg-black"
+            } border border-transparent dark:border-gray-700 rounded-lg`}
           >
             Confirmar compra
           </Button>
