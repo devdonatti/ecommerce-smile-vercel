@@ -73,21 +73,21 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen sm:m-4">
+    <div className="flex justify-center items-center h-screen bg-gray-100 px-4 sm:px-6 md:px-8 lg:px-12">
       {loading && <Loader />}
       {/* Login Form  */}
-      <div className="login_Form bg-gray-300 px-8 py-6 border border-gray-700 rounded-xl shadow-md w-full sm:w-96 md:w-80 lg:w-1/3 xl:w-1/4">
+      <div className="bg-white p-8 border border-gray-300 rounded-xl shadow-lg w-full sm:w-96 md:w-80 lg:w-1/3 xl:w-1/4">
         {/* Top Heading  */}
-        <div className="mb-5">
-          <h2 className="text-center text-2xl font-bold text-black ">Entrar</h2>
+        <div className="mb-5 text-center">
+          <h2 className="text-3xl font-semibold text-black">Iniciar sesión</h2>
         </div>
 
         {/* Input One  */}
-        <div className="mb-3">
+        <div className="mb-4">
           <input
             type="email"
             name="email"
-            placeholder="Email Address"
+            placeholder="Correo electrónico"
             value={userLogin.email}
             onChange={(e) => {
               setUserLogin({
@@ -95,15 +95,15 @@ const Login = () => {
                 email: e.target.value,
               });
             }}
-            className="bg-gray-300 border border-gray-500 px-2 py-2 w-full rounded-md outline-none placeholder-pink-200"
+            className="bg-gray-100 border border-gray-300 px-4 py-2 w-full rounded-md outline-none placeholder-gray-500 focus:ring-2 focus:ring-black"
           />
         </div>
 
         {/* Input Two  */}
-        <div className="mb-5">
+        <div className="mb-6">
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Contraseña"
             value={userLogin.password}
             onChange={(e) => {
               setUserLogin({
@@ -111,28 +111,29 @@ const Login = () => {
                 password: e.target.value,
               });
             }}
-            className="bg-pink-50 border border-gray-500 px-2 py-2 w-full rounded-md outline-none placeholder-pink-200"
+            className="bg-gray-100 border border-gray-300 px-4 py-2 w-full rounded-md outline-none placeholder-gray-500 focus:ring-2 focus:ring-black"
           />
         </div>
 
-        {/* Signup Button  */}
-        <div className="mb-5">
+        {/* Login Button  */}
+        <div className="mb-6">
           <button
             type="button"
             onClick={userLoginFunction}
-            className="bg-black hover:bg-gray-600 w-full text-white text-center py-2 font-bold rounded-md "
+            className="w-full bg-black text-white py-3 font-semibold rounded-md hover:bg-gray-700 transition-colors"
           >
-            Login
+            Iniciar sesión
           </button>
         </div>
 
+        {/* Signup Link  */}
         <div className="text-center">
-          <h2 className="text-black">
+          <p className="text-gray-700">
             ¿No tienes cuenta?{" "}
-            <Link className="text-black font-bold" to={"/signup"}>
+            <Link className="text-black font-semibold" to={"/signup"}>
               Regístrate
             </Link>
-          </h2>
+          </p>
         </div>
       </div>
     </div>

@@ -75,7 +75,7 @@ const BuyNowModal = ({ addressInfo, setAddressInfo, buyNowFunction }) => {
       </Button>
 
       {/* Modal con el formulario de dirección */}
-      <Dialog open={open} handler={handleOpen} className="bg-pink-50">
+      <Dialog open={open} handler={handleOpen} className="bg-gray-500">
         <DialogBody>
           <div className="mb-3">
             <input
@@ -86,7 +86,7 @@ const BuyNowModal = ({ addressInfo, setAddressInfo, buyNowFunction }) => {
                 setAddressInfo({ ...addressInfo, name: e.target.value });
               }}
               placeholder="Nombre"
-              className="bg-pink-50 border border-pink-200 px-2 py-2 w-full rounded-md outline-none text-pink-600 placeholder-pink-300"
+              className="bg-gray-300 border border-gray-200 px-2 py-2 w-full rounded-md outline-none text-black placeholder-yellow-700"
             />
           </div>
 
@@ -99,7 +99,7 @@ const BuyNowModal = ({ addressInfo, setAddressInfo, buyNowFunction }) => {
                 setAddressInfo({ ...addressInfo, address: e.target.value });
               }}
               placeholder="Tu direccion"
-              className="bg-pink-50 border border-pink-200 px-2 py-2 w-full rounded-md outline-none text-pink-600 placeholder-pink-300"
+              className="bg-gray-300 border border-gray-200 px-2 py-2 w-full rounded-md outline-none text-black placeholder-yellow-700"
             />
           </div>
 
@@ -112,7 +112,7 @@ const BuyNowModal = ({ addressInfo, setAddressInfo, buyNowFunction }) => {
                 setAddressInfo({ ...addressInfo, pincode: e.target.value });
               }}
               placeholder="Codigo postal"
-              className="bg-pink-50 border border-pink-200 px-2 py-2 w-full rounded-md outline-none text-pink-600 placeholder-pink-300"
+              className="bg-gray-300 border border-gray-200 px-2 py-2 w-full rounded-md outline-none text-black placeholder-yellow-700"
             />
           </div>
 
@@ -128,7 +128,7 @@ const BuyNowModal = ({ addressInfo, setAddressInfo, buyNowFunction }) => {
                 });
               }}
               placeholder="Telefono"
-              className="bg-pink-50 border border-pink-200 px-2 py-2 w-full rounded-md outline-none text-pink-600 placeholder-pink-300"
+              className="bg-gray-300 border border-gray-200 px-2 py-2 w-full rounded-md outline-none text-black placeholder-yellow-700"
             />
           </div>
 

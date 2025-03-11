@@ -59,7 +59,7 @@ const Signup = () => {
         }),
       };
 
-      // create user Refrence
+      // create user Reference
       const userRefrence = collection(fireDB, "user");
 
       // Add User Detail
@@ -80,20 +80,19 @@ const Signup = () => {
       setLoading(false);
     }
   };
+
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center h-screen bg-gray-100 px-4 sm:px-6 md:px-8 lg:px-12">
       {loading && <Loader />}
-      {/* Login Form  */}
-      <div className="login_Form bg-gray-300 px-8 py-6 border border-gray-600 rounded-xl shadow-md">
+      {/* Signup Form  */}
+      <div className="bg-white p-8 border border-gray-300 rounded-xl shadow-lg w-full sm:w-96 md:w-80 lg:w-1/3 xl:w-1/4">
         {/* Top Heading  */}
-        <div className="mb-5">
-          <h2 className="text-center text-2xl font-bold text-black ">
-            Registro
-          </h2>
+        <div className="mb-5 text-center">
+          <h2 className="text-3xl font-semibold text-black">Registro</h2>
         </div>
 
-        {/* Input One  */}
-        <div className="mb-3">
+        {/* Input One (Name) */}
+        <div className="mb-4">
           <input
             type="text"
             placeholder="Nombre y apellido"
@@ -104,15 +103,15 @@ const Signup = () => {
                 name: e.target.value,
               });
             }}
-            className="bg-gray-200 border border-gray-200 px-2 py-2 w-96 rounded-md outline-none placeholder-gray-400"
+            className="bg-gray-100 border border-gray-300 px-4 py-2 w-full rounded-md outline-none placeholder-gray-500 focus:ring-2 focus:ring-black"
           />
         </div>
 
-        {/* Input Two  */}
-        <div className="mb-3">
+        {/* Input Two (Email) */}
+        <div className="mb-4">
           <input
             type="email"
-            placeholder="Email Address"
+            placeholder="Correo electrónico"
             value={userSignup.email}
             onChange={(e) => {
               setUserSignup({
@@ -120,12 +119,12 @@ const Signup = () => {
                 email: e.target.value,
               });
             }}
-            className="bg-gray-200 border border-gray-200 px-2 py-2 w-96 rounded-md outline-none placeholder-gray-400"
+            className="bg-gray-100 border border-gray-300 px-4 py-2 w-full rounded-md outline-none placeholder-gray-500 focus:ring-2 focus:ring-black"
           />
         </div>
 
-        {/* Input Three  */}
-        <div className="mb-5">
+        {/* Input Three (Password) */}
+        <div className="mb-6">
           <input
             type="password"
             placeholder="Contraseña"
@@ -136,28 +135,29 @@ const Signup = () => {
                 password: e.target.value,
               });
             }}
-            className="bg-gray-200 border border-gray-200 px-2 py-2 w-96 rounded-md outline-none placeholder-gray-400"
+            className="bg-gray-100 border border-gray-300 px-4 py-2 w-full rounded-md outline-none placeholder-gray-500 focus:ring-2 focus:ring-black"
           />
         </div>
 
         {/* Signup Button  */}
-        <div className="mb-5">
+        <div className="mb-6">
           <button
             type="button"
             onClick={userSignupFunction}
-            className="bg-black hover:bg-gray-600 w-full text-white text-center py-2 font-bold rounded-md "
+            className="w-full bg-black text-white py-3 font-semibold rounded-md hover:bg-gray-700 transition-colors"
           >
             Registrarme
           </button>
         </div>
 
-        <div>
-          <h2 className="text-black">
-            Tenes una cuenta?{" "}
-            <Link className=" text-black font-bold" to={"/login"}>
+        {/* Already have an account */}
+        <div className="text-center">
+          <p className="text-gray-700">
+            ¿Ya tienes una cuenta?{" "}
+            <Link className="text-black font-semibold" to="/login">
               Entrar
             </Link>
-          </h2>
+          </p>
         </div>
       </div>
     </div>
