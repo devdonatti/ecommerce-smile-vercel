@@ -46,9 +46,9 @@ app.post("/api/create_preference", async (req, res) => {
         },
       ],
       back_urls: {
-        success: "https://portfolio-mdev-react.netlify.app/",
-        failure: "https://portfolio-mdev-react.netlify.app/",
-        pending: "https://portfolio-mdev-react.netlify.app/",
+        success: "https://ecommerce-smile-vercel-mw1z-front.vercel.app",
+        failure: "https://ecommerce-smile-vercel-mw1z-front.vercel.app",
+        pending: "https://ecommerce-smile-vercel-mw1z-front.vercel.app",
       },
       auto_return: "approved",
     };
