@@ -1,7 +1,14 @@
 import { Button, Dialog, DialogBody } from "@material-tailwind/react";
 import { useState } from "react";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  incrementQuantity,
+  decrementQuantity,
+  deleteFromCart,
+} from "../../redux/cartSlice";
 import toast from "react-hot-toast";
+import axios from "axios";
+import { initMercadoPago } from "@mercadopago/sdk-react";
 
 // Inicialización de MercadoPago
 initMercadoPago("APP_USR-81e7d767-9d1d-4229-afb3-d82f1fd5ed86");
@@ -38,10 +45,12 @@ const BuyNowModal = ({ addressInfo, setAddressInfo, buyNowFunction }) => {
         { cartItems: items }
       );
 
+      // Verifica lo que devuelve la respuesta
       console.log("Respuesta del servidor:", response.data);
 
       const { id, init_point } = response.data;
 
+      // Verifica si el id fue recibido correctamente
       if (id) {
         console.log("Preference ID set:", id); // Verifica que se está guardando correctamente
         window.location.href = init_point; // Redirige al usuario a MercadoPago
