@@ -24,7 +24,7 @@ const App = () => {
         <ScrollTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/*" element={<NoPage />} />
+          <Route path="*" element={<NoPage />} />
           <Route path="/productinfo/:id" element={<ProductInfo />} />
           <Route path="/cart" element={<CartPages />} />
           <Route path="/allproduct" element={<AllProduct />} />
