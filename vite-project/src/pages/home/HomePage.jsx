@@ -8,12 +8,14 @@ import Track from "../../components/track/Track";
 
 const HomePage = () => {
   return (
-    <Layout>
-      <HeroSection />
-      <Category />
-      <HomePageProductCard />
-      <Track />
-    </Layout>
+    <div className="bg-white min-h-screen overflow-x-hidden w-full">
+      <Layout>
+        <HeroSection />
+        <Category />
+        <HomePageProductCard />
+        <Track />
+      </Layout>
+    </div>
   );
 };
 
