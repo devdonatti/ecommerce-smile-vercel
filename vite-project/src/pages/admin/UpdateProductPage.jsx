@@ -120,7 +120,7 @@ const UpdateProductPage = () => {
                   title: e.target.value,
                 });
               }}
-              placeholder="Product Title"
+              placeholder="Titulo del producto"
               className="bg-pink-50 border text-pink-300 border-pink-200 px-2 py-2 w-96 rounded-md outline-none placeholder-pink-300"
             />
           </div>
@@ -137,7 +137,7 @@ const UpdateProductPage = () => {
                   price: e.target.value,
                 });
               }}
-              placeholder="Product Price"
+              placeholder="Precio"
               className="bg-pink-50 border text-pink-300 border-pink-200 px-2 py-2 w-96 rounded-md outline-none placeholder-pink-300"
             />
           </div>
@@ -146,7 +146,7 @@ const UpdateProductPage = () => {
           <div className="mb-3">
             <input
               type="text"
-              name="productImageUrl"
+              name="URL producto"
               value={product.productImageUrl}
               onChange={(e) => {
                 setProduct({
@@ -154,7 +154,7 @@ const UpdateProductPage = () => {
                   productImageUrl: e.target.value,
                 });
               }}
-              placeholder="Product Image Url"
+              placeholder="Url Producto"
               className="bg-pink-50 border text-pink-300 border-pink-200 px-2 py-2 w-96 rounded-md outline-none placeholder-pink-300"
             />
           </div>
@@ -198,7 +198,7 @@ const UpdateProductPage = () => {
                 });
               }}
               name="description"
-              placeholder="Product Description"
+              placeholder="Descripcion del producto"
               rows="5"
               className=" w-full px-2 py-1 text-pink-300 bg-pink-50 border border-pink-200 rounded-md outline-none placeholder-pink-300 "
             ></textarea>

@@ -13,76 +13,75 @@ const UserDetail = () => {
         </div>
 
         {/* table  */}
-        <div className="w-full overflow-x-auto">
-          <table className="w-full text-left border border-collapse sm:border-separate border-pink-100 text-pink-400">
+        <div className="w-full overflow-x-auto m-4">
+          <table className="w-full text-left border border-collapse sm:border-separate  border-black text-black">
             <tbody>
               <tr>
                 <th
                   scope="col"
-                  className="h-12 px-6 text-md border-l first:border-l-0  border-gray-100 text-slate-700 bg-slate-100 font-bold fontPara"
+                  className="h-12 px-6 text-md border-l first:border-l-0   border-black text-slate-700 bg-slate-100 font-bold fontPara"
                 >
                   N°
                 </th>
 
                 <th
                   scope="col"
-                  className="h-12 px-6 text-md border-l first:border-l-0  border-gray-100 text-slate-700 bg-slate-100 font-bold fontPara"
+                  className="h-12 px-6 text-md border-l first:border-l-0  border-black text-slate-700 bg-slate-100 font-bold fontPara"
                 >
                   Nombre
                 </th>
 
                 <th
                   scope="col"
-                  className="h-12 px-6 text-md border-l first:border-l-0 border-pink-100 text-slate-700 bg-slate-100 font-bold fontPara"
+                  className="h-12 px-6 text-md border-l first:border-l-0 border-black text-slate-700 bg-slate-100 font-bold fontPara"
                 >
                   Email
                 </th>
 
                 <th
                   scope="col"
-                  className="h-12 px-6 text-md border-l first:border-l-0  border-gray-100 text-slate-700 bg-slate-100 font-bold fontPara"
+                  className="h-12 px-6 text-md border-l first:border-l-0  border-black text-slate-700 bg-slate-100 font-bold fontPara"
                 >
                   Uid
                 </th>
 
                 <th
                   scope="col"
-                  className="h-12 px-6 text-md border-l first:border-l-0  border-gray-100 text-slate-700 bg-slate-100 font-bold fontPara"
+                  className="h-12 px-6 text-md border-l first:border-l-0  border-black text-slate-700 bg-slate-100 font-bold fontPara"
                 >
                   Rol
                 </th>
 
                 <th
                   scope="col"
-                  className="h-12 px-6 text-md border-l first:border-l-0 border-gray-100 text-slate-700 bg-slate-100 font-bold fontPara"
+                  className="h-12 px-6 text-md border-l first:border-l-0  border-black text-slate-700 bg-slate-100 font-bold fontPara"
                 >
                   Dia
                 </th>
               </tr>
               {getAllUser.map((value, index) => {
                 return (
-                  <tr key={index} className="text-pink-300">
-                    <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 ">
+                  <tr key={index} className="text-black ">
+                    <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0  border-black stroke-slate-500 text-slate-500 ">
                       {index + 1}
                     </td>
 
-                    <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 first-letter:uppercase ">
+                    <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0  border-black stroke-slate-500 text-slate-500 first-letter:uppercase ">
                       {value.name}
                     </td>
-
-                    <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 cursor-pointer ">
+                    <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-black stroke-slate-500 text-slate-500 cursor-pointer ">
                       {value.email}
                     </td>
 
-                    <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500  cursor-pointer ">
+                    <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-black stroke-slate-500 text-slate-500  cursor-pointer ">
                       {value.uid}
                     </td>
 
-                    <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500  cursor-pointer ">
+                    <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-black stroke-slate-500 text-slate-500  cursor-pointer ">
                       {value.role}
                     </td>
 
-                    <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-gray-100 stroke-slate-500 text-slate-500 cursor-pointer ">
+                    <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-black stroke-slate-500 text-slate-500 cursor-pointer ">
                       {value.date}
                     </td>
                   </tr>

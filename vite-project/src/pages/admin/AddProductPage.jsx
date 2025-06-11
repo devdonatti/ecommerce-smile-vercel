@@ -61,7 +61,7 @@ const AddProductPage = () => {
       product.category == "" ||
       product.description == ""
     ) {
-      return toast.error("all fields are required");
+      return toast.error("Todos los campos son requeridos");
     }
 
     setLoading(true);
@@ -74,7 +74,7 @@ const AddProductPage = () => {
     } catch (error) {
       console.log(error);
       setLoading(false);
-      toast.error("Add product failed");
+      toast.error("Agregar producto falló");
     }
   };
   return (
@@ -82,10 +82,10 @@ const AddProductPage = () => {
       <div className="flex justify-center items-center h-screen">
         {loading && <Loader />}
         {/* Login Form  */}
-        <div className="login_Form bg-pink-50 px-8 py-6 border border-pink-100 rounded-xl shadow-md">
+        <div className="login_Form bg-gray-400 px-8 py-6 border border-black rounded-xl shadow-md">
           {/* Top Heading  */}
           <div className="mb-5">
-            <h2 className="text-center text-2xl font-bold text-pink-500 "></h2>
+            <h2 className="text-center text-2xl font-bold text-black "></h2>
           </div>
           {/* Input One  */}
           <div className="mb-3">
@@ -99,8 +99,8 @@ const AddProductPage = () => {
                   title: e.target.value,
                 });
               }}
-              placeholder="Product Title"
-              className="bg-pink-50 border text-pink-300 border-pink-200 px-2 py-2 w-96 rounded-md outline-none placeholder-pink-300"
+              placeholder="Titulo del producto"
+              className="bg-gray-100 border text-black border-black px-2 py-2 w-96 rounded-md outline-none placeholder-gray-400"
             />
           </div>
           {/* Input Two  */}
@@ -115,8 +115,8 @@ const AddProductPage = () => {
                   price: e.target.value,
                 });
               }}
-              placeholder="Product Price"
-              className="bg-pink-50 border text-pink-300 border-pink-200 px-2 py-2 w-96 rounded-md outline-none placeholder-pink-300"
+              placeholder="Precio del producto"
+              className="bg-gray-100 border text-black border-black px-2 py-2 w-96 rounded-md outline-none placeholder-gray-400"
             />
           </div>
           {/* Input Three  */}
@@ -131,8 +131,8 @@ const AddProductPage = () => {
                   productImageUrl: e.target.value,
                 });
               }}
-              placeholder="Product Image Url"
-              className="bg-pink-50 border text-pink-300 border-pink-200 px-2 py-2 w-96 rounded-md outline-none placeholder-pink-300"
+              placeholder="Producto Imagen Url"
+              className="bg-gray-100 border text-black border-black px-2 py-2 w-96 rounded-md outline-none placeholder-gray-400"
             />
           </div>
           {/* Input Four  */}
@@ -145,14 +145,14 @@ const AddProductPage = () => {
                   category: e.target.value,
                 });
               }}
-              className="w-full px-1 py-2 text-pink-300 bg-pink-50 border border-pink-200 rounded-md outline-none  "
+              className="w-full px-1 py-2 text-black bg-gray-100 border border-black rounded-md outline-none   "
             >
               <option disabled>Seleccionar categoria del producto</option>
               {categoryList.map((value, index) => {
                 const { name } = value;
                 return (
                   <option
-                    className=" first-letter:uppercase"
+                    className=" placeholder-gray-400 first-letter:uppercase"
                     key={index}
                     value={name}
                   >
@@ -173,9 +173,9 @@ const AddProductPage = () => {
                 });
               }}
               name="description"
-              placeholder="Product Description"
+              placeholder="Descripcion del producto"
               rows="5"
-              className=" w-full px-2 py-1 text-pink-300 bg-pink-50 border border-pink-200 rounded-md outline-none placeholder-pink-300 "
+              className=" w-full px-2 py-1 text-black bg-gray-50 border border-black rounded-md outline-none  placeholder-gray-400 "
             ></textarea>
           </div>
           {/* Add Product Button  */}
@@ -183,7 +183,7 @@ const AddProductPage = () => {
             <button
               onClick={addProductFunction}
               type="button"
-              className="bg-pink-500 hover:bg-pink-600 w-full text-white text-center py-2 font-bold rounded-md "
+              className="bg-gray-600 hover:bg-black w-full text-white text-center py-2 font-bold rounded-md "
             >
               Agregar producto
             </button>

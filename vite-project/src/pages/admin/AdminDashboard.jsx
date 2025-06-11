@@ -14,15 +14,15 @@ const AdminDashboard = () => {
     <div>
       {/* Top */}
       <div className="top mb-5 px-5 mt-5">
-        <div className="bg-gray-400 py-5 border border-pink-100 rounded-lg">
-          <h1 className="text-2xl font-bold text-black p-2 flex justify-between items-center w-full">
-            <span className="flex-grow text-center">
-              Panel del administrador
-            </span>
-            <Link className="text-black" to={"/"}>
-              HOME
-            </Link>
+        <div className="bg-gray-400 text-black py-6 px-4 rounded-2xl shadow-md flex items-center justify-between">
+          <h1 className="text-2xl font-semibold tracking-wide">
+            Panel del administrador
           </h1>
+          <Link to={"/"}>
+            <button className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300">
+              Home
+            </button>
+          </Link>
         </div>
       </div>
 
@@ -70,8 +70,8 @@ const AdminDashboard = () => {
             <TabList className="flex flex-wrap -m-4 text-center justify-center">
               {/* Total Products */}
               <Tab className="p-4 md:w-1/3 sm:w-1/2 w-full cursor-pointer">
-                <div className=" border bg-gray-300 hover:bg-pink-100 border-gray-400 px-4 py-3 rounded-xl">
-                  <div className="text-pink-500 w-12 h-12 mb-3 inline-block">
+                <div className=" border bg-gray-300 hover:bg-gray-100 border-gray-400 px-4 py-3 rounded-xl">
+                  <div className="text-black w-12 h-12 mb-3 inline-block">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={50}
@@ -93,17 +93,17 @@ const AdminDashboard = () => {
                       <path d="m15 11-1 9" />
                     </svg>
                   </div>
-                  <h2 className="title-font font-medium text-3xl text-pink-400 fonts1">
+                  <h2 className="title-font font-medium text-3xl text-black fonts1">
                     {getAllProduct.length}
                   </h2>
-                  <p className=" text-pink-500  font-bold">Productos</p>
+                  <p className=" text-black  font-bold">Productos</p>
                 </div>
               </Tab>
 
               {/* Total Order  */}
               <Tab className="p-4 md:w-1/4 sm:w-1/2 w-full cursor-pointer">
-                <div className=" border bg-gray-300 hover:bg-pink-100 border-gray-400 px-4 py-3 rounded-xl">
-                  <div className="text-pink-500 w-12 h-12 mb-3 inline-block">
+                <div className=" border bg-gray-300 hover:bg-gray-100 border-gray-400 px-4 py-3 rounded-xl">
+                  <div className="text-black w-12 h-12 mb-3 inline-block">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={50}
@@ -124,17 +124,17 @@ const AdminDashboard = () => {
                       <path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1" />
                     </svg>
                   </div>
-                  <h2 className="title-font font-medium text-3xl text-pink-400 fonts1">
+                  <h2 className="title-font font-medium text-3xl text-black fonts1">
                     {getAllOrder.length}
                   </h2>
-                  <p className=" text-pink-500  font-bold">Ordenes</p>
+                  <p className=" text-black  font-bold">Ordenes</p>
                 </div>
               </Tab>
 
               {/* Total User  */}
               <Tab className="p-4 md:w-1/3 sm:w-1/2 w-full cursor-pointer">
-                <div className=" border bg-gray-300 hover:bg-pink-100 border-gray-400 px-4 py-3 rounded-xl">
-                  <div className="text-pink-500 w-12 h-12 mb-3 inline-block">
+                <div className=" border bg-gray-300 hover:bg-gray-100 border-gray-400 px-4 py-3 rounded-xl">
+                  <div className="text-black w-12 h-12 mb-3 inline-block">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={50}
@@ -153,10 +153,10 @@ const AdminDashboard = () => {
                       <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                     </svg>
                   </div>
-                  <h2 className="title-font font-medium text-3xl text-pink-400 fonts1">
+                  <h2 className="title-font font-medium text-3xl text-black fonts1">
                     {getAllUser.length}
                   </h2>
-                  <p className=" text-pink-500  font-bold">Usuarios</p>
+                  <p className=" text-black  font-bold">Usuarios</p>
                 </div>
               </Tab>
             </TabList>

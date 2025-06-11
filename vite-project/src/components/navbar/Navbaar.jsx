@@ -1,6 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import SearchBar from "../searchBar/SearchBar";
 import { useSelector } from "react-redux";
+import { ShoppingCart } from "lucide-react";
+import { LogOut } from "lucide-react";
 
 const Navbar = () => {
   // get user from localStorage
@@ -31,7 +33,7 @@ const Navbar = () => {
 
   // navList Data
   const navList = (
-    <ul className="flex space-x-3 text-white font-medium text-md px-5">
+    <ul className="flex space-x-3 mt-2 text-white p-2 font-medium text-md px-5">
       {/* All Product */}
       <li>
         <Link to={"/allproduct"}>PRODUCTOS</Link>
@@ -49,7 +51,9 @@ const Navbar = () => {
       {/* Signup */}
       {!user ? (
         <li>
-          <Link to={"/login"}>ENTRAR</Link>
+          <Link to={"/login"}>
+            <LogOut size={24} color="white" strokeWidth={2} />
+          </Link>
         </li>
       ) : (
         ""
@@ -77,8 +81,11 @@ const Navbar = () => {
       )}
 
       {/* Cart */}
-      <li>
-        <Link to={"/cart"}>CARRITO({cartItems.length})</Link>
+      <li className="flex ">
+        <Link className="flex" to={"/cart"}>
+          <ShoppingCart size={24} color="white" strokeWidth={2} />(
+          {cartItems.length})
+        </Link>
       </li>
     </ul>
   );

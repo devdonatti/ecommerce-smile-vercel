@@ -1,6 +1,7 @@
 import { useContext, useState, useRef, useEffect } from "react";
 import myContext from "../../context/myContext";
 import { useNavigate } from "react-router";
+import { Search } from "lucide-react";
 
 const SearchBar = () => {
   const context = useContext(myContext);
@@ -52,13 +53,18 @@ const SearchBar = () => {
   return (
     <div ref={searchBarRef}>
       {/* search input */}
-      <div className="input flex justify-center">
-        <input
-          type="text"
-          placeholder="BUSCAR PRODUCTOS"
-          onChange={handleSearchChange}
-          className="z-index: 10 bg-gray-200 placeholder-gray-400 rounded-lg px-2 py-2 w-96 lg:w-96 md:w-96 outline-none text-black"
-        />
+      <div className="flex justify-center">
+        <div className="relative w-96">
+          <span className="absolute inset-y-0 left-3 flex items-center text-gray-500">
+            <Search size={20} />
+          </span>
+          <input
+            type="text"
+            placeholder="Buscar..."
+            onChange={handleSearchChange}
+            className="pl-10 pr-4 py-2 w-full bg-gray-200 placeholder-gray-400 rounded-lg outline-none text-black"
+          />
+        </div>
       </div>
 
       {/* search drop-down */}
