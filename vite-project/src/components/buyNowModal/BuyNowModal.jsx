@@ -41,7 +41,7 @@ const BuyNowModal = ({ addressInfo, setAddressInfo, buyNowFunction }) => {
 
       // Llamada al backend para crear la preferencia
       const response = await axios.post(
-        "https://smiletienda.com.ar/api/create_preference_cart",
+        "https://www.smiletienda.com.ar/api/create_preference_cart",
         { cartItems: items }
       );
 

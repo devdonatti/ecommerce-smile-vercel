@@ -64,7 +64,7 @@ const CartPage = () => {
   const handleBuyNow = async () => {
     try {
       const response = await axios.post(
-        "https://smiletienda.com.ar/api/create_preference_cart",
+        "https://www.smiletienda.com.ar/api/create_preference_cart",
         { cartItems }
       );
       const preferenceIdcart = response.data.id;
