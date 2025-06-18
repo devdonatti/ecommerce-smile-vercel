@@ -14,10 +14,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://smiletienda.com.ar",
-      "https://wwww.smiletienda.com.ar",
       "https://tiendasmile.vercel.app",
-      "https://ecommerce-smile-vercel-mw1z-front-hhgqy40av.vercel.app",
       "https://ecommerce-smile-vercel-mw1z-front.vercel.app",
       "https://ecommerce-smile-vercel-mw1z-front-git-main-devdonattis-projects.vercel.app",
       "https://ecommerce-smile-vercel-mw1z-front-dd1wnhnyv.vercel.app",
@@ -50,9 +47,9 @@ app.post("/api/create_preference", async (req, res) => {
         },
       ],
       back_urls: {
-        success: "https://www.smiletienda.com.ar/success",
-        failure: "https://www.smiletienda.com.ar/failure",
-        pending: "https://www.smiletienda.com.ar/pending",
+        success: "https://ecommerce-smile-vercel-mw1z-front.vercel.app",
+        failure: "https://ecommerce-smile-vercel-mw1z-front.vercel.app",
+        pending: "https://ecommerce-smile-vercel-mw1z-front.vercel.app",
       },
       auto_return: "approved",
     };
@@ -113,9 +110,9 @@ app.post("/api/create_preference_cart", async (req, res) => {
     const body = {
       items: items,
       back_urls: {
-        success: "https://www.smiletienda.com.ar/success",
-        failure: "https://www.smiletienda.com.ar/failure",
-        pending: "https://www.smiletienda.com.ar/pending",
+        success: "https://ecommerce-smile-vercel-mw1z-front.vercel.app",
+        failure: "https://ecommerce-smile-vercel-mw1z-front.vercel.app",
+        pending: "https://ecommerce-smile-vercel-mw1z-front.vercel.app",
       },
       auto_return: "approved",
     };
