@@ -14,6 +14,7 @@ const app = express();
 app.use(
   cors({
     origin: [
+      "https://www.smiletienda.com.ar",
       "https://tiendasmile.vercel.app",
       "https://ecommerce-smile-vercel-mw1z-front.vercel.app",
       "https://ecommerce-smile-vercel-mw1z-front-git-main-devdonattis-projects.vercel.app",
