@@ -17,6 +17,7 @@ app.use(
       "https://smiletienda.com.ar",
       "https://wwww.smiletienda.com.ar",
       "https://tiendasmile.vercel.app",
+      "https://ecommerce-smile-vercel-mw1z-front-hhgqy40av.vercel.app",
       "https://ecommerce-smile-vercel-mw1z-front.vercel.app",
       "https://ecommerce-smile-vercel-mw1z-front-git-main-devdonattis-projects.vercel.app",
       "https://ecommerce-smile-vercel-mw1z-front-dd1wnhnyv.vercel.app",
