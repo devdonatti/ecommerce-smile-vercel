@@ -51,9 +51,9 @@ app.post("/api/create_preference", async (req, res) => {
       ],
       back_urls: {
         back_urls: {
-          success: "https://smiletienda.com.ar/success",
-          failure: "https://smiletienda.com.ar/failure",
-          pending: "https://smiletienda.com.ar/pending",
+          success: "https://www.smiletienda.com.ar/success",
+          failure: "https://www.smiletienda.com.ar/failure",
+          pending: "https://www.smiletienda.com.ar/pending",
         },
       },
       auto_return: "approved",
@@ -115,9 +115,9 @@ app.post("/api/create_preference_cart", async (req, res) => {
     const body = {
       items: items,
       back_urls: {
-        success: "https://smiletienda.com.ar/success",
-        failure: "https://smiletienda.com.ar/failure",
-        pending: "https://smiletienda.com.ar/pending",
+        success: "https://www.smiletienda.com.ar/success",
+        failure: "https://www.smiletienda.com.ar/failure",
+        pending: "https://www.smiletienda.com.ar/pending",
       },
       auto_return: "approved",
     };
