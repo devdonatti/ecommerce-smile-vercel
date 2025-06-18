@@ -50,11 +50,9 @@ app.post("/api/create_preference", async (req, res) => {
         },
       ],
       back_urls: {
-        back_urls: {
-          success: "https://www.smiletienda.com.ar/success",
-          failure: "https://www.smiletienda.com.ar/failure",
-          pending: "https://www.smiletienda.com.ar/pending",
-        },
+        success: "https://www.smiletienda.com.ar/success",
+        failure: "https://www.smiletienda.com.ar/failure",
+        pending: "https://www.smiletienda.com.ar/pending",
       },
       auto_return: "approved",
     };
