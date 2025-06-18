@@ -42,7 +42,7 @@ const CartPage = () => {
       });
 
       const response = await axios.post(
-        "https://ecommerce-smile-vercel-git-main-devdonattis-projects.vercel.app/api/create_preference_cart",
+        "https://www.smiletienda.com.ar/api/create_preference_cart",
         { cartItems: items }
       );
 
