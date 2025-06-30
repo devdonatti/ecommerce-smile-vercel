@@ -97,7 +97,7 @@ const Navbar = () => {
         {/* left  */}
         <div className="flex justify-center lg:justify-start w-full">
           <Link to={"/"}>
-            <img className="h-16 w-16" src="/logo.png" alt="Logo" />
+            <img className="h-16 w-30" src="/logo2.png" alt="Logo" />
           </Link>
         </div>
 
